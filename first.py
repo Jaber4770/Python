@@ -64,4 +64,36 @@ def printing2(argument1, argument2):
 printing2(1,2)
 
 
+def print3(argument1,argument2):
+    x = argument1 + argument2
+    print(x)
 
+print3(2,2)
+
+# we can not access local varialbe outside of a function
+# print(x)
+
+# void function, void means which is not return
+
+def printing():
+    print('1st msg')
+    print('2nd msg')
+
+result = printing()
+
+print(result)
+
+minutes = 105
+a = minutes // 60
+print(a)
+
+remainder = minutes % 60
+print("remaining minutes: ", remainder)
+
+
+print(5==5)
+print(5==6)
+# print(5=5) syntax error
+
+print(type(True))
+print(type(False))
