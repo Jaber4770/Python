@@ -169,3 +169,21 @@ def factorial(n):
 print(factorial(5))
 
 
+# fruitful functions
+# recurtion
+
+def factoriall(n):
+    spaces = ' ' * (4 * n)
+    print(spaces, 'Factorial', n)
+    
+    if n == 0:
+        print(spaces, 'return 1')
+        return 1
+    
+    else:
+        ricors = factoriall(n-1)
+        result = n * ricors
+        print(spaces, "return", result)
+        return result
+        
+factoriall(5)
