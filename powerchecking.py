@@ -55,3 +55,29 @@ def sequence(n):
 sequence(160)
 
 
+# break
+while True:
+    line = input("enter a string: ")
+    if line == "done":
+        break
+    print(line)
+print("Done!")
+
+
+import math
+
+def greekpi():
+    gpi, i = 0, 0
+    while abs(gpi - math.pi) > 0.0001:
+        gpi += 4 * math.pow(-1, i) / (2 * i + 1)
+        print(i, gpi, abs(gpi - math.pi))  # Show step number, value, and error
+        i += 1
+
+    print("\nApproximation complete!")
+    print(f"Approximated π: {gpi}")
+    print(f"math.pi       : {math.pi}")
+    print(f"Total terms   : {i}")
+
+# Call the function
+greekpi()
+
