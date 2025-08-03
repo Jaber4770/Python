@@ -97,3 +97,58 @@ print(5==6)
 
 print(type(True))
 print(type(False))
+
+
+stringx = ' '
+if(stringx):
+    print('non empty')
+else: 
+    print('empty')
+
+
+
+# else if: elif
+a = 5
+b = 4
+if a>b:
+    print('a is greater than b')
+elif a<b:
+    print('a is less than b')
+else:
+    print('a equal to y')
+
+# nested
+if a>b:
+    if a<10:
+        print("a is greater than b and less than 10")
+
+
+# logical operators
+if a>0 and a<10:
+    print('a is positive and one figure')
+
+
+# recursion
+def countdown(n):
+    if n<= 0:
+        print('Go!!!')
+    else:
+        print(n)
+        countdown(n-1)
+
+
+# infinityy recurrtion
+def inifinity_recurtion():
+    print('Here we are...')
+    inifinity_recurtion()
+    
+
+
+
+
+
+
+
+
+
+
