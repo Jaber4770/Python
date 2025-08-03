@@ -143,12 +143,29 @@ def inifinity_recurtion():
     inifinity_recurtion()
     
 
+# input
+# x1 = input()
+# print("from print: ",x1)
+
+# x2 = input("Enter an integer number\n")
+# print(x2)
 
 
+# datum = input("Enter an integer number\n")
+# str = datum + 'xxxx'
+# print(str)
+# print(datum + '2')
 
 
+# factorial of a number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        x = factorial(n-1)
+        result = n * x
+        return result
 
-
-
+print(factorial(5))
 
 
