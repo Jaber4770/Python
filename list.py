@@ -82,21 +82,116 @@ print(capitalized_all(a))
 print("all character are capitalized: ",only_upper(a))
 
 
-lista = [1,2,3]
-x = lista.pop(0)
-print(x)
-print(lista)
-
-
-
-
 
 """ Implement the Python function mymap(a) that returns a list
 containing the elements of the list a each multiplied by 2. """
 
+
+def mymap(a):
+    result = []              # create an empty list
+    for b in a:              # go through each item in the list
+        result.append(b * 2) # multiply by 2 and add to result
+    return result            # return the new list
+
+c = [1, 2, 3]
+print(mymap(c))   # [2, 4, 6]
 
 
 
 """ Implement the Python function myfilter(a) that returns a
 list containing the odd elements of the list a each multiplied
 by 2. """
+
+def myfilter(a):
+    oddItem = []
+    for b in a:
+        oddItem.append(b*2)
+    return oddItem
+
+k = [1,3,5]
+print(myfilter(k))
+
+
+
+
+
+lista = [1,2,3]
+x = lista.pop(0)
+print(x)
+print(lista)
+
+fox = 'the quick brown fox jumps over the laxy dog..'
+s = list(fox)
+print(fox)
+print(s)
+print(fox.split())
+print(fox.split("a"))
+
+# is
+s1 = 'hello'
+s2 = 'hello'
+print(s1 is s2)
+
+print(id(s1))
+print(id(s2))
+print(id(s1)==id(s2))
+
+a1 = [1,2,3,4,5]
+a2 = [1,2,3,4,5]
+print(a1 == a2)
+print(id(a1) )
+print(id(a2))
+print(id(a1) == id(a2))
+
+print('----------------------------------')
+
+d = [1,2,3,4,5]
+print(d)
+print(id(d))
+def truncate(listd):
+    listd.pop()
+    
+truncate(d)
+print(d)
+print(id(d))
+
+print('-------------------------')
+
+def bad_truncate(listx):
+    listx = listx[1:]
+    print('inside the fuction: ', listx)
+    print(id(listx))
+
+e = [100,10,20,30,40]
+print(id(e))
+bad_truncate(e)
+print(id(e))
+print('in the main: ', e)
+
+
+print('-----------calculating the value of pi--------------')
+import math
+import random
+
+def greekpi(eps):
+    gpi = 0.0
+    no_inside_points = 0
+    no_total_points = 0
+    
+    while abs(gpi - math.pi)>eps:
+        no_total_points +=1
+        x = random.random()
+        y = random.random()
+        if (x**2 + y**2)<=1.0:
+            no_inside_points +=1
+        gpi = 4 * no_inside_points/no_total_points
+        
+    print("inside: ", no_inside_points,"total: ", no_total_points)
+    print(gpi)
+    print(math.pi)
+    
+
+greekpi(0.000001)
+
+
+
