@@ -1,11 +1,32 @@
-def merge(s1,s2,s):
+def merge(left, right):
+    result = []
     i = j = 0
-    while i+j < len(s):
-        if j==len(s2) or (i<len(s1) and s1[i]<s2[j]):
-            print("IF: ", i, '\t', j, '\t')
-            s[i+j] = s1[i]
+    
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
             i += 1
         else:
-            print("ELSE: ", i, '\t', j, '\t')
-            s[i+j] = s2[j]
+            result.append(right[j])
             j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+def mergeSort(arr):
+    step = 1
+    length = len(arr)
+    
+    while step < length:
+        for i in range(0, length, 2 * step):
+            left = arr[i:i + step]
+            right = arr[i + step:i + 2 * step]
+            
+            merged = merge(left, right)
+            for j, val, in enumerate(merged):
+                arr[i+j]=val
+        step *= 2
+    return arr
+unsortedArr = [3, 7, 6, -10, 15, 23.5, 55, -13]
+sortedArr = mergeSort(unsortedArr)
+print("Sorted array: ", sortedArr)
