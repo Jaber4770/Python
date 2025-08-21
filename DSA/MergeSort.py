@@ -26,6 +26,7 @@ def mergeSort(arr):
             for j, val, in enumerate(merged):
                 arr[i+j]=val
         step *= 2
+        
     return arr
 unsortedArr = [3, 7, 6, -10, 15, 23.5, 55, -13]
 sortedArr = mergeSort(unsortedArr)
