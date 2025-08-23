@@ -28,3 +28,18 @@ listt = [1,2,3,4,5,6,7,8,9]
 ress = PrefixAvarage(listt)
 print(ress)
 
+
+# ------------------------------------------------
+# another style to impliment aprefix avarrage
+def prefixAvarage2(list):
+    n = len(list)
+    newList = [0]*n
+    for i in range(n):
+        newList[i] = sum(list[0:i+1]) / (i+1)
+    return newList
+
+list2 = [7,6,5,4,3,2,1]
+res2 = prefixAvarage2(list2)
+print(res2)
+
+
