@@ -31,3 +31,17 @@ def mergeSort(arr):
 unsortedArr = [3, 7, 6, -10, 15, 23.5, 55, -13]
 sortedArr = mergeSort(unsortedArr)
 print("Sorted array: ", sortedArr)
+
+
+# -------------------------------------------------------------------------
+def prefix_averagel(s):
+    n = len(s)
+    A = [0]*n
+    for j in range(n):
+        total = 0 
+        for i in range(j+1):
+           total += s[i]
+        A[j] = total / (j + 1)
+    return A
+           
+        
