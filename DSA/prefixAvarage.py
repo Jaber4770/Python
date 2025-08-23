@@ -42,4 +42,14 @@ list2 = [7,6,5,4,3,2,1]
 res2 = prefixAvarage2(list2)
 print(res2)
 
-
+# ------------------------------------------------------------
+def prefixAvarage3(list):
+    n = len(list)
+    A = [0]*n
+    for i in range(n):
+        total += list[i]
+        A[i]= total / (i + 1)
+    return A
+list3 = [7,6,5,4,3,2,1]
+res3 = prefixAvarage2(list3)
+print(res3)
