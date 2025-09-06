@@ -10,4 +10,6 @@ dll = { 'head': {'prev': None, 'next': 12},
 'tail': {'prev': 3, 'next': None}}
 Implement the Python function delete_first(dll) that removes the node 
 closer to the head and returns the doubly linked list modified.
+
+-solution? similar type question collect from chatgpt
 """
