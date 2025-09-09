@@ -49,18 +49,64 @@ x = '123'
 print('\n', int(x) + 5)
 
 #-----------------------------
+i = 1
+while i<5:
+    print(i)
+    i+=1
+#-----------------------------
+a = 10
+b = 3
+c = a *b
+print(c)
 
 #-----------------------------
+lst = [1,2,3,4,5,6]
+print(len(lst))
 
 #-----------------------------
+a = 'Python'
+for ch in a:
+    print(ch, end="-")
+#-----------------------------
+""" Write the Python function onlyodd(xlist), xlist being a list of 10 integers in the range (1,20),that returns a list containing only the odd numbers contained in the list xlist. """
+
+def onlyodd(xlist):
+    oddList = []
+    for x in xlist:
+        if x % 2 != 0:
+            oddList.append(x)
+    print(oddList)
+    
+xlist = [1,2,3,4,5,6,7,8,9,10]
+onlyodd(xlist)
 
 #-----------------------------
+""" Write a function alternate_case(s) that returns the input string with characters in alternating upper and lower case, starting with uppercase. """
+def alternate_case(s):
+    txt = ''
+    for i, char in enumerate(s):
+        if i % 2 == 0:
+            txt += char.upper()
+        else:
+            txt += char.lower()
+            
+    return txt 
+
+s = 'the quick brown fox jumps over the laxy dog'
+result = alternate_case(s)
+print('result: ', result)
 
 #-----------------------------
-
-#-----------------------------
-
-#-----------------------------
+""" Write a function digit_sum(n) that recursively returns the sum of the digits of an integer n. """
+def digit_sum(n):
+    if n<10:
+        return n
+    else: 
+        return n % 10 + digit_sum(n//10)
+    
+digit = 234
+resultDigit = digit_sum(digit)
+print('sum of the digit: ', resultDigit)
 
 #-----------------------------
 
