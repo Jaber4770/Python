@@ -75,3 +75,45 @@ def convertion():
     print(type(x), type(y), type(z), type(a), type(b), type(c))
     
 convertion()
+
+
+#random
+import random
+
+print(random.randrange(1,10))
+
+#multile line string
+sttring = """ hello 
+tthis is
+multie
+line
+string"""
+print(sttring)
+
+#character
+def characcter():
+    a = "hello exam!"
+    print(a[1])
+    
+characcter()
+
+
+for x in 'bananana':
+    print(x)
+
+
+banana = 'bananannana'
+print(len(banana))
+
+print(range(3))
+
+txt = "The best things in life are free!"
+if "free" in txt:
+    print("yes! 'free' is presented")
+    
+#slice
+texxt = 'Hello, Exam@!'
+print(texxt[2:4])
+
+
+    
