@@ -40,3 +40,38 @@ def func(globalVariable):
     
 func(globalVariable)
 
+#--------------------------------type------------------------
+def checkType():
+    a = 'hello'
+    b = 20
+    c = 20.5
+    d = 1j
+    e = ['apple','ball']
+    f = ('apple', 'banana')
+    g = range(5)
+    h = {'nam': 'jack', 'age': 23}
+    i = {'lili', 'sunflower'}
+    j = frozenset({'apple', 'banana', 'cherry'})
+    k = True
+    l = b'hello'
+    m = bytearray(5)
+    n = memoryview(bytes(5))
+    o = None
+    
+    print(type(a),type(b),type(c),type(d),type(e),type(f),type(g),type(h),type(i),type(j),type(k),type(l),type(m),type(n),type(o))
+    
+checkType()
+
+#-------------convert ---------------------
+def convertion():
+    x = 1
+    y = 1.8
+    z = 1j
+    
+    a = float(x)
+    b = int(y)
+    c = complex(z)
+    print(a,b,c)
+    print(type(x), type(y), type(z), type(a), type(b), type(c))
+    
+convertion()
