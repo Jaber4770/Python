@@ -179,9 +179,50 @@ resultSmall = find_smallest(dll)
 print("res: " ,resultSmall)
 
 #-----------------------------
+""" A binary tree is represented as a dictionary of dictionaries such as for example 
 
-#-----------------------------
+btree = { 'root':{'P':None, 'L': 1, 'R':10},
+1:{'P':'root', 'L':5, 'R':3}, 10:{ 'P':'root', 'L':12, 'R':13},
+5:{'P':1, 'L':None, 'R':None}, 3:{'P':1, 'L':None, 'R':None},
+12:{'P':10, 'L':None, 'R':None}, 13:{'P':10, 'L':None, 'R':None}}
 
-#-----------------------------
+Implement the Python function in_order_search(btree, key) that traverses the binary tree using the in_order traversal algorithm and returns True if key is found, False otherwise.
 
-#-----------------------------
+ """
+ def in_order_search(btree, key):
+    # Helper recursive function
+    def helper(node):
+        if node is None:
+            return False  # reached a leaf
+        
+        # Traverse left subtree
+        if helper(btree[node]['L']):
+            return True
+        
+        # Check current node
+        if node == key:
+            return True
+        
+        # Traverse right subtree
+        if helper(btree[node]['R']):
+            return True
+        
+        return False  # key not found in this branch
+    
+    # Start traversal from the root
+    return helper('root')
+
+
+# Example usage:
+btree = { 
+    'root': {'P': None, 'L': 1, 'R': 10},
+    1: {'P': 'root', 'L': 5, 'R': 3}, 
+    10: {'P': 'root', 'L': 12, 'R': 13},
+    5: {'P': 1, 'L': None, 'R': None}, 
+    3: {'P': 1, 'L': None, 'R': None},
+    12: {'P': 10, 'L': None, 'R': None}, 
+    13: {'P': 10, 'L': None, 'R': None}
+}
+
+print(in_order_search(btree, 12))  # True
+print(in_order_search(btree, 7))   # False
