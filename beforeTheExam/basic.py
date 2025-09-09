@@ -115,5 +115,16 @@ if "free" in txt:
 texxt = 'Hello, Exam@!'
 print(texxt[2:4])
 
+upperText = 'hello Exam'
+print(upperText.upper())
+print(upperText.lower())
 
+#remove white pace
+def removeWhiteSpace():
+    a = " Hello Exam I am  Comming Bro!"
+    print(a)
+    print(a.strip())
+    print(a.replace("H", "J"))
+    
+removeWhiteSpace()
     
