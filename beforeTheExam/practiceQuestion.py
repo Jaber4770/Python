@@ -189,7 +189,7 @@ btree = { 'root':{'P':None, 'L': 1, 'R':10},
 Implement the Python function in_order_search(btree, key) that traverses the binary tree using the in_order traversal algorithm and returns True if key is found, False otherwise.
 
  """
- def in_order_search(btree, key):
+def in_order_search(btree, key):
     # Helper recursive function
     def helper(node):
         if node is None:
@@ -226,3 +226,6 @@ btree = {
 
 print(in_order_search(btree, 12))  # True
 print(in_order_search(btree, 7))   # False
+
+
+#i got mara on the exam today. 
